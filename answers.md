@@ -41,3 +41,9 @@ Part 2: 3402
 Part 1: 287
 
 Part 2: 48160
+
+### Day 8: Handheld Halting
+
+Part 1: 2051
+
+Part 2: 2304
