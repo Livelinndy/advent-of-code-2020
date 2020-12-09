@@ -47,3 +47,9 @@ Part 2: 48160
 Part 1: 2051
 
 Part 2: 2304
+
+### Day 9: Encoding Error
+
+Part 1: 776203571
+
+Part 2: 104800569
