@@ -2,8 +2,6 @@
 # https://adventofcode.com/2020/day/9
 
 from itertools import combinations
-from functools import reduce
-import operator
 
 def isSum(s, arr, n):
 	'''
@@ -31,23 +29,22 @@ def getContiguousNumSet(n, arr):
 	'''
 	Returns an array of contiguous numbers from arr which sum is n
 	'''
-	ss = []
-	s = 0
-	j = 0
-	i = j
+	numSet = []
+	sum = 0
+	start = 0
+	end = start
 	l = len(arr)
-	while i < l:
-		if s > n:
-			ss = []
-			s = 0
-			j += 1
-			i = j
-		elif s == n and len(ss) > 1:
-			return ss
+	while end < l:
+		if sum > n:
+			sum -= numSet[0]
+			numSet.pop(0)
+			start += 1
+		elif sum == n and len(numSet) > 1:
+			return numSet
 		else:
-			ss.append(arr[i])
-			s += arr[i]
-			i += 1
+			numSet.append(arr[end])
+			sum += arr[end]
+			end += 1
 	return []
 	
 # main
