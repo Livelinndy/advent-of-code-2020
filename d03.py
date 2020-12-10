@@ -5,6 +5,9 @@ from functools import reduce
 import operator
 
 def getTrees(right, down):
+	'''
+	Returns the number of trees you would encounter depending on your movement pattern (right, down)
+	'''
 	trees = 0
 	i = right
 	j = down
@@ -20,7 +23,7 @@ def getTrees(right, down):
 
 # main
 	
-file1 = open('input/input3.txt', 'r')
+file1 = open('input/input03.txt', 'r')
 lines = file1.readlines()
 n = len(lines[0]) - 1
 m = len(lines) - 1

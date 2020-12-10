@@ -6,15 +6,21 @@ from functools import reduce
 import operator
 
 def part1_naive(lines):
-    for i in range(len(lines)):
-        for j in range(len(lines)):
-            if i != j:
-                a = int(lines[i])
-                b = int(lines[j])
-                if a + b == 2020:
-                    return a * b
+	'''
+	Returns the product of 2 numbers which sum is 2020
+	'''
+	for i in range(len(lines)):
+		for j in range(len(lines)):
+			if i != j:
+				a = int(lines[i])
+				b = int(lines[j])
+				if a + b == 2020:
+					return a * b
 
 def part1_optimized(arr):
+	'''
+	Returns the product of 2 numbers from arr which sum is 2020
+	'''
 	arr.sort() # O(n.log(n))
 	i=0
 	j= len(arr) - 1
@@ -28,24 +34,30 @@ def part1_optimized(arr):
 			j -= 1
 		
 def part2_naive(lines):
-    for i in range(len(lines)):
-        for j in range(len(lines)):
-            for k in range(len(lines)):
-                if i != j and i != k and j != k:
-                    a = int(lines[i])
-                    b = int(lines[j])
-                    c = int(lines[k])
-                    if a + b + c == 2020:
-                        return a * b * c
+	'''
+	Returns the product of 3 numbers from arr which sum is 2020
+	'''
+	for i in range(len(lines)):
+		for j in range(len(lines)):
+			for k in range(len(lines)):
+				if i != j and i != k and j != k:
+					a = int(lines[i])
+					b = int(lines[j])
+					c = int(lines[k])
+					if a + b + c == 2020:
+						return a * b * c
 						
 def both_parts(arr, n):
+	'''
+	Returns the product of n numbers from arr which sum is 2020
+	'''
 	for p in combinations(arr, n):
 		if sum(p) == 2020:
 			return reduce(operator.mul, p)
 
 # main
 			
-file1 = open('input/input1.txt', 'r') 
+file1 = open('input/input01.txt', 'r') 
 lines = file1.readlines()
 arr = [int(l) for l in lines]
 

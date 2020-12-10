@@ -49,7 +49,7 @@ def getContiguousNumSet(n, arr):
 	
 # main
 	
-file1 = open('input/input9.txt', 'r')
+file1 = open('input/input09.txt', 'r')
 lines = file1.readlines()
 
 arr = [int(l) for l in lines]

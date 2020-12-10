@@ -5,6 +5,9 @@ from functools import reduce
 import operator
 
 def part1(lines):
+	'''
+	Returns the sum of number of questions that have positive answers from any member in each group
+	'''
 	answers = ""
 	counts = []
 	for line in lines:
@@ -20,6 +23,9 @@ def part1(lines):
 	return res
 
 def part2(lines):
+	'''
+	Returns the sum of number of questions that have positive answers from every member in each group
+	'''
 	answers = lines[0].strip()
 	counts = []
 	i = 1
@@ -37,7 +43,7 @@ def part2(lines):
 	
 # main
 	
-file1 = open('input/input6.txt', 'r')
+file1 = open('input/input06.txt', 'r')
 lines = file1.readlines()
 
 print("Part 1:")

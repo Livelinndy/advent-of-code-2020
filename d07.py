@@ -2,6 +2,10 @@
 # https://adventofcode.com/2020/day/7
 
 def getBags(lines):
+	'''
+	Returns a dictionary describing which bags and how many each bag could contain
+	For example: { "color1": { "color2": 1, "color3": 2 }, "color2": { "color3": 1 }, "color3": None }
+	'''
 	bags = {}
 	for line in lines:
 		a = line.split(' ')
@@ -20,6 +24,9 @@ def getBags(lines):
 	return bags
 
 def getNbOutermostBags(bag, allBags, allOuterBags):
+	'''
+	Returns the number of possible outermost bags for a given bag
+	'''
 	currentOuterBags = []
 	res = 0
 	for key, value in allBags.items():
@@ -34,6 +41,9 @@ def getNbOutermostBags(bag, allBags, allOuterBags):
 	return res
 
 def getNbInnerBags(bag, allBags):
+	'''
+	Returns the maximum possible number of bags inside a given bag
+	'''
 	if bag in allBags:
 		if allBags[bag] is not None:
 			res = 0
@@ -45,7 +55,7 @@ def getNbInnerBags(bag, allBags):
 	
 # main
 	
-file1 = open('input/input7.txt', 'r')
+file1 = open('input/input07.txt', 'r')
 lines = file1.readlines()
 
 bags = getBags(lines)

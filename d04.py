@@ -6,6 +6,10 @@ import operator
 import re
 
 def getNbCorrectPassports_part1(lines):
+	'''
+	Returns the number of correct passwords
+	For each passport we are checking the presence of necessary fields
+	'''
 	fields = { "byr": False, "iyr": False, "eyr": False, "hgt": False, "hcl": False, "ecl": False, "pid": False }
 	count = 0
 	for line in lines:
@@ -32,6 +36,10 @@ def getNbCorrectPassports_part1(lines):
 	return count
 
 def getNbCorrectPassports_part2(lines):
+	'''
+	Returns the number of correct passwords
+	For each passport we are checking not only the presence of necessary fields but also the validity of values
+	'''
 	fields = { "byr": False, "iyr": False, "eyr": False, "hgt": False, "hcl": False, "ecl": False, "pid": False }
 	count = 0
 	for line in lines:
@@ -91,7 +99,7 @@ def getNbCorrectPassports_part2(lines):
 
 # main
 	
-file1 = open('input/input4.txt', 'r')
+file1 = open('input/input04.txt', 'r')
 lines = file1.readlines()
 
 print("Part 1:")

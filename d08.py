@@ -2,6 +2,9 @@
 # https://adventofcode.com/2020/day/8
 
 def part1(lines):
+	'''
+	Returns the value of acc just before the program loops on itself
+	'''
 	visited = []
 	acc = 0
 	i = 0
@@ -23,6 +26,9 @@ def part1(lines):
 	return acc
 
 def terminates(lines, nJmpNop):
+	'''
+	Checks if the program terminates if we replace the nth jmp/nop by the opposite command
+	'''
 	l = len(lines)
 	visited = []
 	acc = 0
@@ -56,6 +62,11 @@ def terminates(lines, nJmpNop):
 	return False
 	
 def getFinalAcc(lines, nJmpNop):
+	'''
+	Returns the final value of acc
+	(If and only if the replacement of the nth jmp/nop by the opposite command makes the program terminate,
+	otherwise returns -1)
+	'''
 	l = len(lines)
 	visited = []
 	acc = 0
@@ -88,6 +99,11 @@ def getFinalAcc(lines, nJmpNop):
 	return -1
 	
 def part2(lines):
+	'''
+	Finds the index of the jmp/nop to replace by the opposite command so the program terminates,
+	uses this index to calculate the final value of acc,
+	returns the final value of acc
+	'''
 	l = len(lines)
 	for i in range(1,l):
 		if terminates(lines, i):
@@ -96,7 +112,7 @@ def part2(lines):
 	
 # main
 	
-file1 = open('input/input8.txt', 'r')
+file1 = open('input/input08.txt', 'r')
 lines = file1.readlines()
 
 print("Part 1:")

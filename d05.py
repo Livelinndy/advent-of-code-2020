@@ -2,6 +2,9 @@
 # https://adventofcode.com/2020/day/5
 
 def getSeatIds(lines):
+	'''
+	Returns the sorted array of seat ids
+	'''
 	lst = []
 	for l in lines:
 		cs = { "mn": 0, "mx": 127 }
@@ -24,9 +27,15 @@ def getSeatIds(lines):
 	return lst
 
 def getMaxSeatId(lst):
+	'''
+	Returns the max seat id
+	'''
 	return lst[-1]
 
 def getMySeatId(lst):
+	'''
+	Returns the seat id of the only free seat
+	'''
 	prev = 0
 	for id in lst:
 		if id == prev + 2:
@@ -36,7 +45,7 @@ def getMySeatId(lst):
 	
 # main
 	
-file1 = open('input/input5.txt', 'r')
+file1 = open('input/input05.txt', 'r')
 lines = file1.readlines()
 
 lst = getSeatIds(lines)
