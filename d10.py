@@ -30,9 +30,9 @@ def part2(arr):
 	l = len(arr)
 	ways = [0] * l
 	ways[0] = 1
-	for i in range(0,l):
+	for i in range(0, l):
 		n = ways[i]
-		for j in range(i+1, len(arr)):
+		for j in range(i + 1, l):
 			if arr[j] - arr[i] > 3:
 				break
 			ways[j] += n
