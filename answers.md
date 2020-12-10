@@ -53,3 +53,9 @@ Part 2: 2304
 Part 1: 776203571
 
 Part 2: 104800569
+
+### Day 10: Adapter Array
+
+Part 1: 2738
+
+Part 2: 74049191673856
