@@ -65,3 +65,9 @@ Part 2: 74049191673856
 Part 1: 2296
 
 Part 2: 2089
+
+### Day 12: Rain Risk
+
+Part 1: 1186
+
+Part 2: 47806
