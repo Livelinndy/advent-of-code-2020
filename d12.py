@@ -101,7 +101,7 @@ def part2(lines):
 file1 = open('input/input12.txt', 'r')
 lines = file1.readlines()
 
-print("WARNING: turtle very is slow... but it will get there eventually")
+print("WARNING: turtle is very slow... but it will get there eventually")
 
 print("Part 1:")
 print(part1(lines))
